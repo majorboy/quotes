@@ -1,0 +1,29 @@
+.header {
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  &__bar {
+    position: relative;
+    a {
+      text-decoration: none;
+    }
+    .title {
+      float: left;
+      padding: 10px;
+      margin-left: 50px;
+    }
+    .nav {
+      float: right;
+      margin: 25px;
+      a:first-child{
+        margin-right: 15px;
+      }
+    }
+  }
+}
+

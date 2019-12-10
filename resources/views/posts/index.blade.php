@@ -6,7 +6,15 @@
   <link href="/css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <header class="header"></header>
+  <header class="header">
+    <div class="header__bar">
+      <h1 class="title"><a href="/">Quotes</a></h1>
+      <div class="nav">
+        <a href="#">ログイン</a>
+        <a href="#">新規登録</a>
+      </div>
+    </div>
+  </header>
   <div class="container">
     <div class="card quote">
       <div class="content">
