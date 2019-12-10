@@ -11430,6 +11430,7 @@ body {
 .header__bar .title {
   float: left;
   padding: 10px;
+  margin-left: 50px;
 }
 
 .header__bar .nav {
