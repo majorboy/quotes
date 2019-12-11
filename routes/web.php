@@ -15,12 +15,15 @@
 //     return view('welcome');
 // });
 
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::resource('posts', 'App\Controllers\PostsController');
-
 Route::get('/', 'PostsController@index');
+
+Route::resource('posts', 'App\Controllers\PostsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
