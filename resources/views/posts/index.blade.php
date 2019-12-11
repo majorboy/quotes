@@ -16,6 +16,23 @@
     </div>
   </header>
   <div class="container">
+    @foreach($posts as $post)
+    <div class="card quote">
+      <div class="content">
+          <img class="" alt="noimage", src="/storage/no_image.png" width="50" height="50">
+          {{ $post->body }}
+        <div class="translation">
+          {{ $post->body }}
+        </div>
+        <div class="source">
+          {{ $post->source }}
+        </div>
+      </div>
+      <div class="card-footer">
+        マルクス
+      </div>
+    </div>
+    @endforeach
     <div class="card quote">
       <div class="content">
         <img class="" alt="noimage", src="/storage/no_image.png" width="50" height="50">
