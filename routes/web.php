@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', 'PostsController@index');
-Route::get('/posts/{id}', 'PostsController@show');
+Route::get('/posts/{post}', 'PostsController@show');
 
 // Route::resource('posts', 'App\Controllers\PostsController');
 
