@@ -21,11 +21,13 @@
     @foreach($posts as $post)
     <div class="card quote">
       <div class="content">
-          <img class="" alt="noimage", src="/storage/no_image.png" width="50" height="50">
-          {{ $post->body }}
-        <div class="translation">
-          {{ $post->body }}
-        </div>
+        <img class="" alt="noimage", src="/storage/no_image.png" width="50" height="50">
+        {{ $post->body }}
+        @isset($post->translation)
+          <div class="translation">
+            {{ $post->translation }}
+          </div>
+        @endisset
         <div class="source">
           {{ $post->source }}
         </div>
