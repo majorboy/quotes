@@ -11400,6 +11400,12 @@ body {
 
 .container .quote .card-footer {
   font-size: 14px;
+  display: -webkit-box;
+  display: flex;
+}
+
+.container .quote .card-footer .comment {
+  margin-left: 15px;
 }
 
 .container img {

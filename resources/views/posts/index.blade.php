@@ -33,7 +33,12 @@
         </div>
       </div>
       <div class="card-footer">
-        マルクス
+        <div class="user">
+          マルクス
+        </div>
+        <div class="comment">
+          <a href="{{ action('PostsController@show', $post)}}">コメント</a>
+        </div>
       </div>
     </div>
     @endforeach
