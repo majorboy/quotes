@@ -14,6 +14,7 @@
         @if (Route::has('register'))
           <a href="{{ route('register') }}">新規登録</a>
         @endif
+        <a href="{{ url('/posts/create') }}">Quote</a>
       </div>
     </div>
   </header>
