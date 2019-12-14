@@ -81,9 +81,18 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $this->validate($request,[
+            'body' => 'required|max:500',
+            'translation'=> 'max:500',
+            'source' => 'required|max:150'
+        ]);
+        $post->body = $request->body;
+        $post->translation = $request->translation;
+        $post->source = $request->source;
+        $post->save();
+        return redirect('/');
     }
 
     /**
