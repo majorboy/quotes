@@ -11462,6 +11462,27 @@ label {
   font-size: 20px;
 }
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 16px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 16px;
+}
+
 textarea {
   height: 120px;
   font-size: 20px;
@@ -11473,5 +11494,11 @@ button {
 
 .quote-form {
   margin-top: 100px;
+}
+
+.error {
+  margin: 10px;
+  font-size: 16px;
+  color: tomato;
 }
 

@@ -38,6 +38,11 @@ class PostsController extends Controller
      */
     public function store(Request $request, User $user)
     {
+        $this->validate($request,[
+            'body' => 'required|max:500',
+            'translation'=> 'max:500',
+            'source' => 'required|max:150'
+        ]);
         $post = new Post();
         $post->body = $request->body;
         $post->translation = $request->translation;
