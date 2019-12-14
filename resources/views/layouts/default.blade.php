@@ -12,6 +12,7 @@
       <div class="nav">
         <a href="{{ url('/posts/create') }}">投稿する</a>
         <a href="{{ route('login') }}">ログイン</a>
+        <a href="{{ route('logout') }}">ログアウト</a>
         @if (Route::has('register'))
           <a href="{{ route('register') }}">新規登録</a>
         @endif
