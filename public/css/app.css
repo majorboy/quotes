@@ -11410,7 +11410,7 @@ body {
   display: flex;
 }
 
-.container .quote .card-footer .comment {
+.container .quote .card-footer a {
   margin-left: 15px;
 }
 
