@@ -11429,6 +11429,10 @@ body {
   margin: 10px;
 }
 
+.container .pagination {
+  margin-top: 15px;
+}
+
 .header {
   padding: 10px;
   border-bottom: 1px solid #d8d8d8;
