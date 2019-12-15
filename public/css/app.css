@@ -11412,6 +11412,11 @@ body {
 
 .container .quote .card-footer a {
   margin-left: 15px;
+  text-decoration: none;
+}
+
+.container .quote .card-footer a:hover {
+  text-decoration: none;
 }
 
 .container img {

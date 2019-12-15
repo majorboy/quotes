@@ -38,6 +38,10 @@ body {
       display: flex;
       a {
         margin-left: 15px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
