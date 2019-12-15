@@ -10,6 +10,11 @@ use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index']);
+    }
+
     public function index()
     {
         $posts = Post::latest()->get();
