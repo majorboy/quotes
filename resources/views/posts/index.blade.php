@@ -28,8 +28,12 @@
       </div>
       <div class="comment">
         <a href="{{ action('PostsController@show', $post)}}">コメント</a>
-        <a href="{{ action('PostsController@edit', $post)}}">編集</a>
-        <a href="#" data-id="{{$post->id}}" class="delete">削除</a>
+        @can('update',$post)
+          <a href="{{ action('PostsController@edit', $post)}}">編集</a>
+        @endcan
+        @can('delete',$post)
+          <a href="#" data-id="{{$post->id}}" class="delete">削除</a>
+        @endcan
         <form method="post" action="{{ url('/posts', $post->id)}}" id="form_{{ $post->id }}"> 
           {{ csrf_field() }}
           {{ method_field('delete') }}
