@@ -13,6 +13,8 @@ class PostsController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except(['index']);
+        $this->middleware('can:update,post')->only(['edit','update']);
+        $this->middleware('can:delete,post')->only(['destroy']);
     }
 
     public function index()
