@@ -3,6 +3,11 @@
 @section('title', 'Quotes')
 
 @section('content')
+  @if (session('flash_message'))
+      <div class="message alert alert-success">
+          {{ session('flash_message') }}
+      </div>
+  @endif
   @foreach($posts as $post)
   <div class="card quote">
     <div class="content">

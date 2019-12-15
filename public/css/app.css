@@ -11366,6 +11366,10 @@ body {
   overflow: scroll;
 }
 
+.container .message {
+  margin-top: 100px;
+}
+
 .container .item {
   display: inline-block;
   vertical-align: middle;

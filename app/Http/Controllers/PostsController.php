@@ -29,7 +29,7 @@ class PostsController extends Controller
         $post->source = $request->source;
         $post->user_id = auth()->id();
         $post->save();
-        return redirect('/');
+        return redirect('/')->with('flash_message', 'Quoteを投稿しました');
     }
 
     public function show(Post $post)
@@ -48,12 +48,12 @@ class PostsController extends Controller
         $post->translation = $request->translation;
         $post->source = $request->source;
         $post->save();
-        return redirect('/');
+        return redirect('/')->with('flash_message', 'Quoteを更新しました');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect('/');
+        return redirect('/')->with('flash_message', 'Quoteを削除しました');;
     }
 }

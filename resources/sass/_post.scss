@@ -5,6 +5,9 @@ body {
   width: 700px;
   margin: 20px auto;
   overflow: scroll;
+  .message {
+    margin-top: 100px;
+  }
   .item {
     display: inline-block;
     vertical-align: middle;
