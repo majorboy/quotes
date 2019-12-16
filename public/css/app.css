@@ -11515,3 +11515,21 @@ button {
   color: tomato;
 }
 
+.comment-container .comment {
+  list-style: none;
+}
+
+.comment-container .comment__user_name {
+  margin-top: 10px;
+}
+
+.comment-container .comment__content {
+  position: relative;
+  width: calc(100% - 56px);
+  padding: 16px;
+  background: #eef0f4;
+  border-radius: 15px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+

@@ -1,0 +1,17 @@
+.comment-container {
+  .comment {
+    list-style: none;
+    &__user_name{
+      margin-top: 10px;
+    }
+    &__content {
+      position: relative;
+      width: calc(100% - 56px);
+      padding: 16px;
+      background: #eef0f4;
+      border-radius: 15px;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+  }
+}
