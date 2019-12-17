@@ -7,7 +7,7 @@
     {{ csrf_field() }}
     <div class="form-group">
       <label>Quote</label>
-      <textarea name="body" rows="6" class="form-control quote" placeholder="Quoteを入力(最大500文字）" value="{{ old('body') }}">{{ old('body') }}</textarea>
+      <textarea name="body" rows="6" class="form-control quote" placeholder="Quoteを入力(最大500文字）">{{ old('body') }}</textarea>
       @if($errors->has('body'))
         <div class="error">{{ $errors->first('body') }}</div>
       @endif
