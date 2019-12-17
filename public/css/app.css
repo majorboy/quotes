@@ -11533,3 +11533,11 @@ button {
   word-break: break-all;
 }
 
+.comment-container .without_comment {
+  margin-top: 15px;
+}
+
+.comment-container .comment_field {
+  font-size: 1rem;
+}
+
