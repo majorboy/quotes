@@ -31,7 +31,7 @@
         <h5 class="comment__user_name">{{ $comment->user->name }}</h5>
         <div class="comment__content">
           <div class="comment__content__text">
-            {{ $comment->content }}
+            {!! nl2br(e($comment->content)) !!}
           </div>
         </div>
       </div>
