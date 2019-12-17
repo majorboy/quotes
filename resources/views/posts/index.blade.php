@@ -24,7 +24,7 @@
     </div>
     <div class="card-footer">
       <div class="user">
-        {{ $post->user->name }}
+        <a href="{{ url('/users', $post->user->id) }}">{{ $post->user->name }}</a> 
       </div>
       <div class="comment">
         <a href="{{ action('PostsController@show', $post)}}">コメント</a>
