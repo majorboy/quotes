@@ -61,6 +61,6 @@ class PostsController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect('/')->with('flash_message', 'Quoteを削除しました');;
+        return redirect()->back()->with('flash_message', 'Quoteを削除しました');;
     }
 }

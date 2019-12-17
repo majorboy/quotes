@@ -11433,6 +11433,10 @@ body {
   margin-top: 15px;
 }
 
+.container .mypage_user_name {
+  margin-top: 100px;
+}
+
 .header {
   padding: 10px;
   border-bottom: 1px solid #d8d8d8;
