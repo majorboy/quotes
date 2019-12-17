@@ -4,7 +4,12 @@
 
 @section('content')
   <h3 class="mypage_user_name">Quotes by {{ $user->name }}</h3>
-  @foreach($user->posts as $post)
+  @if (session('flash_message'))
+        <div class="alert alert-success">
+            {{ session('flash_message') }}
+        </div>
+    @endif
+  @foreach($posts as $post)
   <div class="card quote">
     <div class="content">
       <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
@@ -20,7 +25,7 @@
     </div>
     <div class="card-footer">
       <div class="user">
-        {{ $post->user->name }}
+        {{ $user->name }}
       </div>
       <div class="comment">
         <a href="{{ action('PostsController@show', $post)}}">コメント</a>
@@ -38,5 +43,7 @@
     </div>
   </div>
   @endforeach
+  {{ $posts->links() }}
+  <script src="/js/main.js"></script>
 @endsection
 
