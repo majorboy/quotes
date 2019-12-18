@@ -14,6 +14,7 @@
         <a href="{{ route('login') }}">ログイン</a>
         <a href="{{ route('register') }}">新規登録</a>
       @else
+        <a href="{{action('StocksController@index', auth()->id())}}">ストック一覧</a>
         <a href="{{ url('/users', auth()->id()) }}">マイページ</a>
         <a href="{{ url('/posts/create') }}">投稿する</a>
         <a href="{{ route('logout') }}">ログアウト</a>
