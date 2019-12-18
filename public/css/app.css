@@ -11553,7 +11553,11 @@ button {
   font-size: 1rem;
 }
 
-.login {
+.auth {
   margin-top: 100px;
+}
+
+.auth .label-pass {
+  font-size: 14px;
 }
 
