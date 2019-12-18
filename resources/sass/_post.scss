@@ -46,6 +46,9 @@ body {
           text-decoration: none;
         }
       }
+      .count {
+        margin-left: 10px;
+      }
     }
   }
   img {
@@ -58,5 +61,8 @@ body {
   }
   .mypage_user_name {
     margin-top: 100px;
+  }
+  .comment_count {
+    margin-left: 10px;
   }
 }

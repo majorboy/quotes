@@ -11423,6 +11423,10 @@ body {
   text-decoration: none;
 }
 
+.container .quote .card-footer .count {
+  margin-left: 10px;
+}
+
 .container img {
   border-radius: 100px;
   border: 1px solid black;
@@ -11435,6 +11439,10 @@ body {
 
 .container .mypage_user_name {
   margin-top: 100px;
+}
+
+.container .comment_count {
+  margin-left: 10px;
 }
 
 .header {
