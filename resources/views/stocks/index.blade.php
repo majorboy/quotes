@@ -3,12 +3,12 @@
 @section('title', 'Quotes')
 
 @section('content')
-  <h3 class="mypage_user_name">Quotes by {{ $user->name }}</h3>
+  <h3 class="mypage_user_name">Stocks by {{ $user->name }}</h3>
   @if (session('flash_message'))
-        <div class="alert alert-success">
-            {{ session('flash_message') }}
-        </div>
-    @endif
+      <div class="alert alert-success">
+          {{ session('flash_message') }}
+      </div>
+  @endif
   @foreach($posts as $post)
   <div class="card quote">
     <div class="content">
@@ -31,16 +31,14 @@
         <a href="{{ action('PostsController@show', $post)}}">コメント</a>
         <span class="count">{{ $post->comments()->count()}}</span>
       </div>
-      @if(Auth::check() && Auth::user()->is_stock($post->id))
+      @if(Auth::user()->is_stock($post->id))
         <a href="#" data-id="{{$post->id}}" class="unstock">ストック解除</a>
-        <span class="count">{{ $post->stock_users()->count()}}</span>
         <form method="post" action="{{ route('stocks.unstock', $post->id) }}" id="unstock_{{ $post->id }}"> 
           {{ csrf_field() }}
           {{ method_field('delete') }}
         </form>
       @else
         <a href="#" data-id="{{$post->id}}" class="stock">ストックする</a>
-        <span class="count">{{ $post->stock_users()->count() }}</span>
         <form method="post" action="{{ route('stocks.stock', $post->id) }}" id="stock_{{ $post->id }}">
           {{ csrf_field() }}
         </form>
@@ -61,4 +59,3 @@
   {{ $posts->links() }}
   <script src="/js/main.js"></script>
 @endsection
-

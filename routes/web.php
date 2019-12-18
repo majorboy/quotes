@@ -24,6 +24,12 @@ Route::patch('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 Route::post('/posts/{post}/comments','CommentsController@store');
 Route::get('/users/{user}', 'UsersController@show')->where('user','[0-9]+');
+Route::group(['prefix'=>'posts/{post}'],function(){
+  Route::post('stock','StocksController@store')->name('stocks.stock');
+  Route::delete('unstock','StocksController@destroy')->name('stocks.unstock');
+});
+Route::get('/users/{user}/stocks', 'StocksController@index');
+
 
 
 Auth::routes();

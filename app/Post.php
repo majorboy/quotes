@@ -18,4 +18,13 @@ class Post extends Model
         return $this->hasMany('App\Comment');
     }
 
+    public function stocks()
+    {
+        return $this->belongsToMany(Post::class, 'stocks','user_id','post_id')->withTimestamps();
+    }
+
+    public function stock_users() 
+    {
+        return $this->belongsToMany(User::class,'stocks','post_id','user_id')->withTimestamps();
+    }
 }
