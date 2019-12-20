@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\User;
 use App\Auth;
+use App\Comment;
 use App\Http\Requests\PostRequest;
 
 class PostsController extends Controller
@@ -42,8 +43,8 @@ class PostsController extends Controller
     public function show(Post $post)
     {
         return view('posts.show')->with('post',$post);
+            
     }
-
     public function edit(Post $post)
     {
         return view('posts.edit')->with('post', $post);
@@ -61,6 +62,6 @@ class PostsController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return redirect()->back()->with('flash_message', 'Quoteを削除しました');;
+        return back()->with('flash_message', 'Quoteを削除しました');
     }
 }

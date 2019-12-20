@@ -49,11 +49,11 @@
       @endcan
       @can('delete',$post)
         <a href="#" data-id="{{$post->id}}" class="delete">削除</a>
+        <form method="post" action="{{ url('/posts', $post->id)}}" id="form_{{ $post->id }}"> 
+          {{ csrf_field() }}
+          {{ method_field('delete') }}
+        </form>
       @endcan
-      <form method="post" action="{{ url('/posts', $post->id)}}" id="form_{{ $post->id }}"> 
-        {{ csrf_field() }}
-        {{ method_field('delete') }}
-      </form>
     </div>
   </div>
   @endforeach

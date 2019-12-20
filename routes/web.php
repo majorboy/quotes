@@ -22,14 +22,16 @@ Route::post('/posts','PostsController@store');
 Route::get('/posts/{post}/edit','PostsController@edit');
 Route::patch('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
-Route::post('/posts/{post}/comments','CommentsController@store');
 Route::get('/users/{user}', 'UsersController@show')->where('user','[0-9]+');
+
+Route::get('/users/{user}/stocks', 'StocksController@index');
 Route::group(['prefix'=>'posts/{post}'],function(){
   Route::post('stock','StocksController@store')->name('stocks.stock');
   Route::delete('unstock','StocksController@destroy')->name('stocks.unstock');
 });
-Route::get('/users/{user}/stocks', 'StocksController@index');
 
+Route::post('/posts/{post}/comments','CommentsController@store');
+Route::delete('/posts/{post}/{comment}','CommentsController@destroy');
 
 
 Auth::routes();

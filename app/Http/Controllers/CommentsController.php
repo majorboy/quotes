@@ -12,9 +12,21 @@ use App\Http\Requests\CommentRequest;
 
 class CommentsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:delete,comment')->only(['destroy']);
+
+    }
+
     public function store(CommentRequest $request, Post $post) {
         $comment = new Comment(['content' => $request->content, 'user_id' => auth()->id()]);
         $post->comments()->save($comment);
-        return redirect()->action('PostsController@show', $post);
+        return back();
+    }
+
+    public function destroy(Post $post, Comment $comment)
+    {
+        $comment->delete();
+        return back();
     }
 }
