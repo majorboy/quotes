@@ -25,9 +25,17 @@
   var unstocks = document.getElementsByClassName('unstock');
   for(i=0; i < unstocks.length; i++) {
     unstocks[i].addEventListener('click',function(e){
-      console.log('OK');
       e.preventDefault();
       document.getElementById('unstock_' + this.dataset.id).submit();
+    });
+  }
+
+  //コメント削除
+  var target = document.getElementsByClassName('comment__head__delete');
+  for(i = 0; i < target.length; i++) {
+    target[i].addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById('comment_' + this.dataset.id).submit();
     });
   }
 })();
