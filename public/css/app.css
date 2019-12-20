@@ -11529,10 +11529,22 @@ button {
 
 .comment-container .comment {
   list-style: none;
+  margin-top: 15px;
 }
 
-.comment-container .comment__user_name {
+.comment-container .comment__head {
+  display: -webkit-box;
+  display: flex;
+}
+
+.comment-container .comment__head__user_name {
   margin-top: 10px;
+}
+
+.comment-container .comment__head__delete {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .comment-container .comment__content {
@@ -11549,7 +11561,11 @@ button {
   margin-top: 15px;
 }
 
-.comment-container .comment_field {
+.comment-container .comment-form {
+  margin-top: 40px;
+}
+
+.comment-container .comment-form__field {
   font-size: 1rem;
 }
 

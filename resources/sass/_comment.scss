@@ -1,8 +1,17 @@
 .comment-container {
   .comment {
     list-style: none;
-    &__user_name{
-      margin-top: 10px;
+    margin-top: 15px;
+    &__head {
+      display: flex;
+      &__user_name{
+        margin-top: 10px;
+      }
+      &__delete {
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
     &__content {
       position: relative;
@@ -17,7 +26,10 @@
   .without_comment {
     margin-top: 15px;
   }
-  .comment_field {
-    font-size: 1rem;
+  .comment-form {
+    margin-top: 40px;
+    &__field {
+      font-size: 1rem;
+    }
   }
 }
