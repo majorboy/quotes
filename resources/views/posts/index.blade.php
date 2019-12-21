@@ -11,7 +11,7 @@
   @foreach($posts as $post)
   <div class="card quote">
     <div class="content">
-      <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
+      <img class="" alt="noimage", src="/storage/default-user.png" width="70" height="70">
       <div class="body">{{ $post->body }}</div>
     </div>
     @isset($post->translation)

@@ -5,7 +5,7 @@
 @section('content')
 <div class="card quote">
     <div class="content">
-      <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
+      <img class="" alt="noimage", src="/storage/default-user.png" width="70" height="70">
       <div class="body">{{ $post->body }}</div>
     </div>
       @isset($post->translation)
@@ -26,7 +26,7 @@
   <ul class="comments list-unstyled">
     @foreach($post->comments as $comment)
       <li class="clearfix comment media">
-        <img class="" alt="noimage" class="comment__icon align-self-start"  src="/storage/no_image.png" width="70" height="70">
+        <img class="" alt="noimage" class="comment__icon align-self-start"  src="/storage/default-user.png" width="70" height="70">
         <div class="media-body">
           <div class="comment__head">
             <h5 class="comment__head__user_name">{{ $comment->user->name }}</h5>
