@@ -11429,7 +11429,6 @@ body {
 
 .container img {
   border-radius: 100px;
-  border: 1px solid black;
   margin: 10px;
 }
 
@@ -11519,6 +11518,10 @@ button {
 
 .quote-form {
   margin-top: 100px;
+}
+
+input[type=file] {
+  font-size: 12px;
 }
 
 .error {
