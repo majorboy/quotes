@@ -5,10 +5,21 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\Models\Media;
 
-class User extends Authenticatable
+class User extends Authenticatable implements HasMedia
 {
     use Notifiable;
+    use HasMediaTrait;
+
+    public function registerMediaConversions(Media $media = null)
+    {
+        $this->addMediaConversion('thumb')
+            ->width(50)
+            ->height(50);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -83,4 +94,16 @@ class User extends Authenticatable
     {
         return $this->stocks()->where('post_id', $postId)->exists();
     }
+
+    public function has_avatar() 
+    {
+        $exist = $this->media->count();
+        if($exist == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 }
