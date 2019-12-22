@@ -20,11 +20,22 @@
     .nav {
       float: right;
       margin: 25px;
-      &__icon {
-        margin: 0 20px;
-      }
       &__item {
         padding: 5px;
+      }
+      .menu {
+        ul{
+          padding: 0;
+        }
+        &__icon {
+          margin: 0 20px;
+        }
+        &__list {
+          &__item{
+           padding: 5px;
+           list-style: none;
+          }
+        }
       }
     }
   }
