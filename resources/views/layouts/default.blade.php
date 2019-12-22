@@ -18,12 +18,30 @@
         <a href="{{ url('/posts/create') }}" class="nav__item">投稿する</a>
         <a href="{{ route('logout') }}" class="nav__item">ログアウト</a>
         @if(Auth::user()->has_avatar())
-          <img src="{{Auth::user()->getFirstMediaUrl('avatars', 'thumb') }}" class="nav__icon" width="35" height="35">
+          <div class="menu">
+            <img src="{{Auth::user()->getFirstMediaUrl('avatars', 'thumb') }}" class="menu__icon" width="35" height="35">
+            <ul class="menu__list">
+              <li class="menu__list__item">
+                <a href="{{action('StocksController@index', auth()->id())}}">ストック一覧</a>
+              </li>
+              <li class="menu__list__item">
+                <a href="{{ url('/users', auth()->id()) }}">マイページ</a>
+              </li>
+            </ul>
+          </div>
         @else
-          <img src="/storage/default-user.png" alt="noimage" class="nav__icon" width="35" height="35">
+          <div class="menu">
+            <img src="/storage/default-user.png" alt="noimage" class="nav__icon" width="35" height="35">
+            <ul class="menu__list">
+              <li class="menu__list__item">
+                <a href="{{action('StocksController@index', auth()->id())}}">ストック一覧</a>
+              </li>
+              <li class="menu__list__item">
+                <a href="{{ url('/users', auth()->id()) }}">マイページ</a>
+              </li>
+            </ul>
+          </div>
         @endif
-        <!-- <a href="{{action('StocksController@index', auth()->id())}}">ストック一覧</a>
-        <a href="{{ url('/users', auth()->id()) }}">マイページ</a> -->
       @endguest
       </div>
     </div>

@@ -11475,12 +11475,21 @@ body {
   margin: 25px;
 }
 
-.header__bar .nav__icon {
+.header__bar .nav__item {
+  padding: 5px;
+}
+
+.header__bar .nav .menu ul {
+  padding: 0;
+}
+
+.header__bar .nav .menu__icon {
   margin: 0 20px;
 }
 
-.header__bar .nav__item {
+.header__bar .nav .menu__list__item {
   padding: 5px;
+  list-style: none;
 }
 
 .form-control {
