@@ -11362,12 +11362,12 @@ body {
 
 .container {
   width: 700px;
-  margin: 20px auto;
+  margin: 0px auto;
   overflow: scroll;
 }
 
 .container .message {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .container .item {
@@ -11382,7 +11382,7 @@ body {
 }
 
 .container .quote:first-child {
-  margin-top: 100px;
+  margin-top: 160px;
 }
 
 .container .quote .content {
@@ -11400,7 +11400,7 @@ body {
 .container .quote .source {
   font-size: 15px;
   font-weight: 400;
-  margin-left: 90px;
+  margin-left: 70px;
 }
 
 .container .quote .source {
@@ -11436,12 +11436,13 @@ body {
   margin-top: 15px;
 }
 
-.container .mypage_user_name {
-  margin-top: 100px;
-}
-
 .container .comment_count {
   margin-left: 10px;
+}
+
+.container .mypage_user_name,
+.container .stock_user_name {
+  margin-top: 130px;
 }
 
 .header {
@@ -11474,12 +11475,20 @@ body {
   margin: 25px;
 }
 
-.header__bar .nav a {
-  margin-right: 15px;
+.header__bar .nav__icon {
+  margin: 0 20px;
+}
+
+.header__bar .nav__item {
+  padding: 5px;
 }
 
 .form-control {
   font-size: 1.2rem;
+}
+
+.quote-form {
+  margin-top: 130px;
 }
 
 label {
@@ -11516,12 +11525,12 @@ button {
   border-radius: 10px;
 }
 
-.quote-form {
-  margin-top: 100px;
-}
-
 input[type=file] {
   font-size: 12px;
+}
+
+.submit {
+  margin-bottom: 50px;
 }
 
 .error {
@@ -11573,7 +11582,7 @@ input[type=file] {
 }
 
 .auth {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .auth .label-pass {

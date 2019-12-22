@@ -20,8 +20,11 @@
     .nav {
       float: right;
       margin: 25px;
-      a {
-        margin-right: 15px;
+      &__icon {
+        margin: 0 20px;
+      }
+      &__item {
+        padding: 5px;
       }
     }
   }
