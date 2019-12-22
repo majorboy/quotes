@@ -49436,6 +49436,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./main */ "./resources/js/main.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49571,6 +49573,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  'use strict'; // Quote削除
+
+  var cmds = document.getElementsByClassName('delete');
+  var i;
+
+  for (i = 0; i < cmds.length; i++) {
+    cmds[i].addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (confirm('Quoteを削除しますか？')) {
+        document.getElementById('form_' + this.dataset.id).submit();
+      }
+    });
+  } // Stock追加
+
+
+  var stocks = document.getElementsByClassName('stock');
+
+  for (i = 0; i < stocks.length; i++) {
+    stocks[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('stock_' + this.dataset.id).submit();
+    });
+  } // Stock解除
+
+
+  var unstocks = document.getElementsByClassName('unstock');
+
+  for (i = 0; i < unstocks.length; i++) {
+    unstocks[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('unstock_' + this.dataset.id).submit();
+    });
+  } //コメント削除
+
+
+  var target = document.getElementsByClassName('comment__head__delete');
+
+  for (i = 0; i < target.length; i++) {
+    target[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.getElementById('comment_' + this.dataset.id).submit();
+    });
+  }
+})();
 
 /***/ }),
 
