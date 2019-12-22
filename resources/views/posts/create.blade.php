@@ -26,6 +26,6 @@
         <div class="error">{{ $errors->first('source') }}</div>
       @endif
     </div>
-    <button type="submit" class="btn-primary">投稿する</button>   
+    <button type="submit" class="btn-primary submit">投稿する</button>   
   </form>
 @endsection

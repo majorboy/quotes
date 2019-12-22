@@ -5,7 +5,11 @@
 @section('content')
 <div class="card quote">
     <div class="content">
-      <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
+      @if($post->user->has_avatar())
+        <img src="{{$post->user->getFirstMediaUrl('avatars', 'thumb') }}" width="50" height="50">
+      @else
+        <img src="/storage/default-user.png" alt="noimage" width="50" height="50">
+      @endif
       <div class="body">{{ $post->body }}</div>
     </div>
       @isset($post->translation)
@@ -26,7 +30,11 @@
   <ul class="comments list-unstyled">
     @foreach($post->comments as $comment)
       <li class="clearfix comment media">
-        <img class="" alt="noimage" class="comment__icon align-self-start"  src="/storage/no_image.png" width="70" height="70">
+        @if($comment->user->has_avatar())
+          <img src="{{$comment->user->getFirstMediaUrl('avatars', 'thumb')}}" width="50" height="50">
+        @else
+          <img src="/storage/default-user.png" alt="noimage" width="50" height="50">
+        @endif
         <div class="media-body">
           <div class="comment__head">
             <h5 class="comment__head__user_name">{{ $comment->user->name }}</h5>
@@ -56,8 +64,7 @@
         <div class="error">{{ $errors->first('content') }}</div>
       @endif
     </div>
-    <button type="submit" class="btn-primary ">投稿する</button>   
+    <button type="submit" class="btn-primary submit">投稿する</button>   
   </form>
 </div>
-<script src="/js/main.js"></script>
 @endsection

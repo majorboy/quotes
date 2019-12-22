@@ -3,7 +3,7 @@
 @section('title', 'Quotes')
 
 @section('content')
-  <h3 class="mypage_user_name">Stocks by {{ $user->name }}</h3>
+  <h3 class="stock_user_name">Stocks by {{ $user->name }}</h3>
   @if (session('flash_message'))
       <div class="alert alert-success">
           {{ session('flash_message') }}
@@ -12,8 +12,12 @@
   @foreach($posts as $post)
   <div class="card quote">
     <div class="content">
-      <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
-      <div class="body">{{ $post->body }}</div>
+    @if($post->user->has_avatar())
+      <img src="{{$post->user->getFirstMediaUrl('avatars', 'thumb') }}" width="50" height="50">
+    @else
+      <img src="/storage/default-user.png" alt="noimage" width="50" height="50">
+    @endif
+    <div class="body">{{ $post->body }}</div>
     </div>
     @isset($post->translation)
       <div class="translation">
@@ -57,5 +61,4 @@
   </div>
   @endforeach
   {{ $posts->links() }}
-  <script src="/js/main.js"></script>
 @endsection

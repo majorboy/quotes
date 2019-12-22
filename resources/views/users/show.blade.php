@@ -12,7 +12,11 @@
   @foreach($posts as $post)
   <div class="card quote">
     <div class="content">
-      <img class="" alt="noimage", src="/storage/no_image.png" width="70" height="70">
+      @if($post->user->has_avatar())
+        <img src="{{$post->user->getFirstMediaUrl('avatars', 'thumb') }}"width="50" height="50">
+      @else
+        <img src="/storage/default-user.png" alt="noimage" width="50" height="50">
+      @endif
       <div class="body">{{ $post->body }}</div>
     </div>
     @isset($post->translation)

@@ -14,7 +14,7 @@ class AddTranslationToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->text('translation')->after('body');
+            $table->text('translation')->after('body')->nullable();
         });
     }
 
