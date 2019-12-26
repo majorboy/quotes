@@ -2,6 +2,7 @@
 
 return [
 
+    
     /*
      * The disk on which to store added files and derived images by default. Choose
      * one or more of the disks you've configured in config/filesystems.php.
@@ -29,7 +30,7 @@ return [
         /*
          * The domain that should be prepended when generating urls.
          */
-        'domain' => 'https://'.env('AWS_BUCKET').'.s3.amazonaws.com',
+        'domain' => 'https://'.env('AWS_BUCKET').'.s3-ap-northeast-1.amazonaws.com',
     ],
 
     'remote' => [
@@ -43,6 +44,7 @@ return [
          */
         'extra_headers' => [
             'CacheControl' => 'max-age=604800',
+            'ACL' => 'public-read',
         ],
     ],
 
