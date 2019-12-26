@@ -31,7 +31,7 @@
           </div>
         @else
           <div class="menu">
-            <img src="/storage/default-user.png" alt="noimage" class="nav__icon" width="35" height="35">
+            <img src="https://quotesbucket.s3-ap-northeast-1.amazonaws.com/1/default-user.png" alt="noimage" class="nav__icon" width="35" height="35">
             <ul class="menu__list">
               <li class="menu__list__item">
                 <a href="{{action('StocksController@index', auth()->id())}}">ストック一覧</a>
