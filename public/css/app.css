@@ -11487,6 +11487,10 @@ body {
   margin: 0 20px;
 }
 
+.header__bar .nav .menu__list {
+  display: none;
+}
+
 .header__bar .nav .menu__list__item {
   padding: 5px;
   list-style: none;
