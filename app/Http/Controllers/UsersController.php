@@ -14,5 +14,13 @@ class UsersController extends Controller
             'posts' => $posts,
         ]);
     }
+
+    public function edit(User $user){
+        return view('users.edit');
+    }
+
+    public function pass(){
+        return view('users.pass');
+    }
 }
 
