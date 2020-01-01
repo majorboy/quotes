@@ -30,9 +30,15 @@ class UsersController extends Controller
 
         $user->fill($form)->save();
 
+        if(isset($request['avatar'])){
+            if($user->has_avatar()) {
+                $user->media[0]->delete();
+            }
+            $user->addMediaFromRequest('avatar')
+            ->toMediaCollection('avatars');
+        }
         return back()->with('flash_message', 'プロフィールを更新しました');
     }
-
     public function pass(){
         return view('users.pass');
     }
