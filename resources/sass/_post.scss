@@ -61,8 +61,17 @@ body {
   .comment_count {
     margin-left: 10px;
   }
-  .mypage_user_name, .stock_user_name {
+  .inline-item {
+    display: inline-block;
+  }
+  .user_profile {
+    color: white;
+    margin-left: 340px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .mypage_user_name,.stock_user_name {
     margin-top: 130px;
   }
-
 }

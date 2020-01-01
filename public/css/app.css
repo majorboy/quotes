@@ -11440,6 +11440,19 @@ body {
   margin-left: 10px;
 }
 
+.container .inline-item {
+  display: inline-block;
+}
+
+.container .user_profile {
+  color: white;
+  margin-left: 340px;
+}
+
+.container .user_profile:hover {
+  text-decoration: none;
+}
+
 .container .mypage_user_name,
 .container .stock_user_name {
   margin-top: 130px;
