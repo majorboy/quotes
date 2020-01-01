@@ -4,7 +4,9 @@
 
 @section('content')
   <h3 class="mypage_user_name inline-item">Quotes by {{ $user->name }}</h3>
-  <a class="btn btn-primary user_profile inline-item" href="{{ action('UsersController@edit', $user)}}">プロフィール編集</a>
+  @if(Auth::check())
+    <a class="btn btn-primary user_profile inline-item" href="{{ action('UsersController@edit', $user)}}">プロフィール編集</a>
+  @endif
   @if (session('flash_message'))
         <div class="alert alert-success">
             {{ session('flash_message') }}
