@@ -23,6 +23,10 @@ Route::get('/posts/{post}/edit','PostsController@edit');
 Route::patch('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 Route::get('/users/{user}', 'UsersController@show')->where('user','[0-9]+');
+Route::get('/users/{user}/edit', 'UsersController@edit');
+Route::get('/users/{user}/pass', 'UsersController@pass');
+
+
 
 Route::get('/users/{user}/stocks', 'StocksController@index');
 Route::group(['prefix'=>'posts/{post}'],function(){
