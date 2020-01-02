@@ -97,13 +97,11 @@ class User extends Authenticatable implements HasMedia
 
     public function has_avatar() 
     {
-        $exist = $this->media->count();
-        if($exist == 1) {
+        $count = $this->media->count();
+        if($count == 1) {
             return true;
         } else {
             return false;
         }
     }
-
-
 }
