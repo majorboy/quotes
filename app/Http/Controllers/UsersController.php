@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Auth;
+use App\Http\Requests\UserRequest;
 
 
 class UsersController extends Controller
@@ -22,14 +23,14 @@ class UsersController extends Controller
         return view('users.edit')->with('user',$user);
     }
 
-    public function update(Request $request){
+    public function update(UserRequest $request){
+        //プロフィール更新処理
         $user = \Auth::user();
         $form = $request->all();
-
         unset($form['_token']);
-
         $user->fill($form)->save();
 
+        //アバター更新処理
         if(isset($request['avatar'])){
             if($user->has_avatar()) {
                 $user->media[0]->delete();
