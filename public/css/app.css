@@ -11498,6 +11498,7 @@ body {
 
 .header__bar .nav .menu__icon {
   margin: 0 20px;
+  border-radius: 50%;
 }
 
 .header__bar .nav .menu__list {
