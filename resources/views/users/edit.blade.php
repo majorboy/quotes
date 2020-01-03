@@ -54,7 +54,7 @@
                         <button type="submit" class="btn btn-primary">
                             {{ __('更新する') }}
                         </button>
-                        <a href="{{ action('UsersController@pass', Auth::user())}}" class="btn btn-primary ml-3">パスワード変更</a>
+                        <a href="{{ action('PasswordsController@edit')}}" class="btn btn-primary ml-3">パスワード変更</a>
                     
                     </div>
                 </form>
