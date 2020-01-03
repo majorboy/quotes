@@ -23,7 +23,9 @@ Route::get('/users/{user}', 'UsersController@show')->where('user','[0-9]+');
 Route::get('/users/{user}/edit', 'UsersController@edit');
 Route::patch('/users/{user}', 'UsersController@update');
 
-Route::get('/users/{user}/pass', 'UsersController@pass');
+Route::get('/users/{user}/pass', 'PasswordsController@edit');
+Route::patch('/users/{user}/pass', 'PasswordsController@update');
+
 
 Route::get('/users/{user}/stocks', 'StocksController@index');
 Route::group(['prefix'=>'posts/{post}'],function(){
