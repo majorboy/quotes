@@ -10,11 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
+Auth::routes();
 Route::get('/', 'PostsController@index');
 Route::get('/posts/{post}', 'PostsController@show')->where('post','[0-9]+');
 Route::get('/posts/create','PostsController@create');
@@ -29,9 +25,6 @@ Route::patch('/users/{user}', 'UsersController@update');
 
 Route::get('/users/{user}/pass', 'UsersController@pass');
 
-
-
-
 Route::get('/users/{user}/stocks', 'StocksController@index');
 Route::group(['prefix'=>'posts/{post}'],function(){
   Route::post('stock','StocksController@store')->name('stocks.stock');
@@ -42,7 +35,6 @@ Route::post('/posts/{post}/comments','CommentsController@store');
 Route::delete('/posts/{post}/{comment}','CommentsController@destroy');
 
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

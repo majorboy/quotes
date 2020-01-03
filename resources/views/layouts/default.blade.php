@@ -16,7 +16,11 @@
         <a href="{{ route('register') }}" class="nav__item">新規登録</a>
       @else
         <a href="{{ url('/posts/create') }}" class="nav__item">投稿する</a>
-        <a href="{{ route('logout') }}" class="nav__item">ログアウト</a>
+        <a href="{{ route('logout') }}" class="nav__item" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">ログアウト</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+        </form>
         @if(Auth::user()->has_avatar())
           <div class="menu">
             <img src="{{Auth::user()->getFirstMediaUrl('avatars', 'thumb') }}" class="menu__icon" width="35" height="35">
