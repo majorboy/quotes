@@ -23,7 +23,7 @@
         </form>
         @if(Auth::user()->has_avatar())
           <div class="menu">
-            <img src="{{Auth::user()->getFirstMediaUrl('avatars', 'thumb') }}" class="menu__icon" width="35" height="35">
+            <img src="{{Auth::user()->getFirstMediaUrl('avatars') }}" class="menu__icon" width="35" height="35">
             <ul class="menu__list">
               <li class="menu__list__item">
                 <a href="{{ url('/users', auth()->id()) }}">マイページ</a>
