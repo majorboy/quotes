@@ -12,16 +12,16 @@ http://18.177.200.78/
 本アプリを実装しました。
 
 ## 開発環境
-フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（ドロップダウンメニュー等）
+フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（ドロップダウンメニュー等）  
 バックエンド： Laravel  
 インフラ：　AWS（EC2） S3(アバター画像保存） Laradock    
-Laradockを利用してEC2インスタンス内で以下Dopckerコンテナを構築しています      
+Laradockを利用してEC2インスタンス内で以下Dockerコンテナを構築しています      
 Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 
 ## 機能
 1. 英語の名言投稿機能（Quote　CRUD）
 2. マイページ機能（自分の投稿一覧を表示）
-3. ストック機能（お気に入りの投稿をストック→「ストック一覧」で表示可能
+3. ストック機能（お気に入りの投稿をストック→「ストック一覧」で表示可能）
 4. コメント投稿機能
 5. ユーザー登録 /ログイン・ログアウト機能
 6. アバター画像登録機能（[laravel-medialibrary](https://github.com/spatie/laravel-medialibrary)経由でS3に保存可能）
@@ -35,6 +35,24 @@ Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 <a href="https://twitter.com/tuk_nagayan" target="_blank">長田 謙吾：Twitter</a>
 
 ## メイン機能の紹介  
+#### 投稿一覧
+![image](https://user-images.githubusercontent.com/49441355/72108675-7f6a0200-3377-11ea-81bd-bcf71934c768.png)
+* 自分自身の投稿のみ編集・削除できます。
+* 「ストックする」をクリックするとお気に入りのQuoteを保存できます。
+
+#### 新規投稿(Quote)
+![image](https://user-images.githubusercontent.com/49441355/72105910-c228db80-3371-11ea-9dfc-fbbf86858234.png)
+
+#### マイページ （自分の投稿一覧を表示）
+![image](https://user-images.githubusercontent.com/49441355/72108843-ca841500-3377-11ea-8d71-1272c12424e7.png)
+
+#### ストック機能 (お気に入りの投稿を保存）
+![image](https://user-images.githubusercontent.com/49441355/72109317-05d31380-3379-11ea-898d-24171f516374.png)
+* 「ストック解除」をクリックするとストック一覧から削除可能です。自分自身のQuoteもストックできます。
+
+#### コメント投稿機能
+![image](https://user-images.githubusercontent.com/49441355/72106823-76773180-3373-11ea-9892-d9fbbd55e59f.png)
+* 自分自身のコメントのみ削除できます。
 
 #### ユーザー登録
 ![image](https://user-images.githubusercontent.com/49441355/72103699-141b3280-336d-11ea-92fb-2a44e85f8383.png)
@@ -52,11 +70,11 @@ Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 
 ![image](https://user-images.githubusercontent.com/49441355/72104991-f3a0a780-336f-11ea-921f-2d735b3c7dc1.png)
 
-* パスワード変更フォームはプロフィール編集とは別ページで変更する仕様にしています 
-* メインのバリデーションは以下の2つを実装しています  
+* パスワード変更フォームはプロフィール編集とは別ページで変更する仕様にしています。
+* メインのバリデーションは以下の2つを実装しています。  
   1 現在のパスワードと異なる場合変更不可 2 現在のパスワードと同じパスワードの場合変更不可
   
 ## ライセンス
 This project is licensed free.
-ご自由にご利用ください
+ご自由にご利用ください。
 
