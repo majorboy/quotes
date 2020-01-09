@@ -16,11 +16,11 @@
       @else
         <img src="https://quotesbucket.s3-ap-northeast-1.amazonaws.com/1/default-user.png" alt="noimage" width="50" height="50">
       @endif
-      <div class="body">{{ $post->body }}</div>
+      <div class="body">{!! nl2br(e($post->body)) !!}</div>
     </div>
     @isset($post->translation)
       <div class="translation">
-        {{ $post->translation }}
+      {!! nl2br(e($post->translation)) !!}
       </div>
     @endisset
     <div class="source">
