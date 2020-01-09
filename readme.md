@@ -24,7 +24,7 @@ Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 3. ストック機能（お気に入りの投稿をストック→「ストック一覧」で表示可能
 4. コメント投稿機能
 5. ユーザー登録 /ログイン・ログアウト機能
-6. アバター画像登録機能（[laravel medialibrary](https://github.com/spatie/laravel-medialibrary)経由でS3に保存可能）
+6. アバター画像登録機能（[laravel-medialibrary](https://github.com/spatie/laravel-medialibrary)経由でS3に保存可能）
 7. プロフィール編集機能(ユーザー名、メールアドレス、アバター画像の変更が可能）
 8. パスワード変更機能
 
@@ -36,6 +36,26 @@ Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 
 ## メイン機能の紹介  
 
+#### ユーザー登録
+![image](https://user-images.githubusercontent.com/49441355/72103699-141b3280-336d-11ea-92fb-2a44e85f8383.png)
+* アバター画像未設定の場合はデフォルトのユーザー画像が表示されます。
+
+#### プロフィール編集機能
+![image](https://user-images.githubusercontent.com/49441355/72104324-89d3ce00-336e-11ea-9377-39c5c2dadfd8.png)
+* ユーザー名、メールアドレス、アバター画像の変更が可能です。
+[Demo動画はこちら](https://gyazo.com/bc5c170f20806a32a6f7348b9eaee382)
+
+#### パスワード変更機能
+![image](https://user-images.githubusercontent.com/49441355/72104880-b5a38380-336f-11ea-9a14-10ee8e38c6aa.png)
+
+![image](https://user-images.githubusercontent.com/49441355/72104817-93aa0100-336f-11ea-9206-c9c2688585a3.png)
+
+![image](https://user-images.githubusercontent.com/49441355/72104991-f3a0a780-336f-11ea-921f-2d735b3c7dc1.png)
+
+* パスワード変更フォームはプロフィール編集とは別ページで変更する仕様にしています 
+* メインのバリデーションは以下の2つを実装しています  
+  1 現在のパスワードと異なる場合変更不可 2 現在のパスワードと同じパスワードの場合変更不可
+  
 ## ライセンス
 This project is licensed free.
 ご自由にご利用ください
