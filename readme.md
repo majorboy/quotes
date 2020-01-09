@@ -1,72 +1,62 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Quotes
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## アプリ概要
+英語の名言を共有するソーシャルアプリです。
 
-## About Laravel
+デモページ公開中です（AWS)
+http://18.177.200.78/
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 企画背景
+自分自身、英語が好きでお気に入りのフレーズをノートにまとめる取り組みをこれまで行ってきました。  
+個人レベルに留まらずこうした英語フレーズを学習者間で共有できるサービスがあれば面白いと考え  
+本アプリを実装しました。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 開発環境
+フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（ドロップダウンメニュー等）
+バックエンド： Laravel  
+インフラ：　AWS（EC2） S3(アバター画像保存） Laradock    
+Laradockを利用してEC2インスタンス内で以下Dopckerコンテナを構築しています      
+Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 機能
+1. 英語の名言投稿機能（Quote　CRUD）
+2. マイページ機能（自分の投稿一覧を表示）
+3. ストック機能（お気に入りの投稿をストック→「ストック一覧」で表示可能
+4. コメント投稿機能
+5. ユーザー登録 /ログイン・ログアウト機能
+6. アバター画像登録機能（[laravel-medialibrary](https://github.com/spatie/laravel-medialibrary)経由でS3に保存可能）
+7. プロフィール編集機能(ユーザー名、メールアドレス、アバター画像の変更が可能）
+8. パスワード変更機能
 
-## Learning Laravel
+## 使い方  
+#### (各ページの表示例は以下「メイン機能の紹介」をご覧ください）
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 作者
+<a href="https://twitter.com/tuk_nagayan" target="_blank">長田 謙吾：Twitter</a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## メイン機能の紹介  
 
-## Laravel Sponsors
+#### ユーザー登録
+![image](https://user-images.githubusercontent.com/49441355/72103699-141b3280-336d-11ea-92fb-2a44e85f8383.png)
+* アバター画像未設定の場合はデフォルトのユーザー画像が表示されます。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### プロフィール編集機能
+![image](https://user-images.githubusercontent.com/49441355/72104324-89d3ce00-336e-11ea-9377-39c5c2dadfd8.png)
+* ユーザー名、メールアドレス、アバター画像の変更が可能です。
+[Demo動画はこちら](https://gyazo.com/bc5c170f20806a32a6f7348b9eaee382)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+#### パスワード変更機能
+![image](https://user-images.githubusercontent.com/49441355/72104880-b5a38380-336f-11ea-9a14-10ee8e38c6aa.png)
 
-## Contributing
+![image](https://user-images.githubusercontent.com/49441355/72104817-93aa0100-336f-11ea-9206-c9c2688585a3.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![image](https://user-images.githubusercontent.com/49441355/72104991-f3a0a780-336f-11ea-921f-2d735b3c7dc1.png)
 
-## Security Vulnerabilities
+* パスワード変更フォームはプロフィール編集とは別ページで変更する仕様にしています 
+* メインのバリデーションは以下の2つを実装しています  
+  1 現在のパスワードと異なる場合変更不可 2 現在のパスワードと同じパスワードの場合変更不可
+  
+## ライセンス
+This project is licensed free.
+ご自由にご利用ください
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
