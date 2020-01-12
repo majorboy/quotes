@@ -16,7 +16,7 @@ http://18.177.200.78/
 バックエンド： Laravel  
 インフラ：　AWS（EC2） S3(アバター画像保存） Laradock    
 Laradockを利用してEC2インスタンス内で以下Dockerコンテナを構築しています      
-Webサーバ： nginx　PHP実行環境： php-fpm  DB： MySQL
+Webサーバ： nginx　　　PHP実行環境： php-fpm  　　DB： MySQL
 
 ## 機能
 1. 英語の名言投稿機能（Quote　CRUD）
