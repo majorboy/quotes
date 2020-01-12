@@ -24,7 +24,7 @@
         <a href="{{ action('PostsController@show', $post)}}">コメント</a>
         <span class="count">{{ $post->comments()->count()}}</span>
       </div>
-      @if(Auth::user()->is_stock($post->id))
+      @if(Auth::check() && Auth::user()->is_stock($post->id))
         <a href="#" data-id="{{$post->id}}" class="unstock">ストック解除</a>
         <span class="count">{{ $post->stock_users()->count()}}</span>
         <form method="post" action="{{ route('stocks.unstock', $post->id) }}" id="unstock_{{ $post->id }}"> 
