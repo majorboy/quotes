@@ -14,7 +14,7 @@ http://18.177.200.78/
 ## 開発環境
 フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（ドロップダウンメニュー等）  
 バックエンド： Laravel  
-インフラ：　AWS（EC2） S3(アバター画像保存） Laradock    
+インフラ：　AWS（EC2） S3(アバター画像保存） Laradock （Docker)    
 Laradockを利用してEC2インスタンス内で以下Dockerコンテナを構築しています      
 Webサーバ： nginx　　　PHP実行環境： php-fpm  　　DB： MySQL
 
