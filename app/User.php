@@ -81,6 +81,7 @@ class User extends Authenticatable implements HasMedia
         return $this->stocks()->where('post_id', $postId)->exists();
     }
 
+    // アバター有無の判定 無しの場合はデフォルトのユーザー画像を表示
     public function has_avatar() 
     {
         $count = $this->media->count();
