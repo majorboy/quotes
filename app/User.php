@@ -68,26 +68,12 @@ class User extends Authenticatable implements HasMedia
     // 投稿ストック機能
     public function stock($postId)
     {
-        $exist = $this->is_stock($postId);
-
-        if($exist){
-            return false;
-        } else {
-            $this->stocks()->attach($postId);
-            return true;
-        }
+        $this->stocks()->attach($postId);
     }
 
     public function unstock($postId)
     {
-        $exist = $this->is_stock($postId);
-
-        if($exist) {
-            $this->stocks()->detach($postId);
-            return true;
-        } else {
-            return false;
-        }
+        $this->stocks()->detach($postId);
     }
 
     public function is_stock($postId)
