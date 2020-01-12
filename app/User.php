@@ -68,26 +68,12 @@ class User extends Authenticatable implements HasMedia
     // 投稿ストック機能
     public function stock($postId)
     {
-        $exist = $this->is_stock($postId);
-
-        if($exist){
-            return false;
-        } else {
-            $this->stocks()->attach($postId);
-            return true;
-        }
+        $this->stocks()->attach($postId);
     }
 
     public function unstock($postId)
     {
-        $exist = $this->is_stock($postId);
-
-        if($exist) {
-            $this->stocks()->detach($postId);
-            return true;
-        } else {
-            return false;
-        }
+        $this->stocks()->detach($postId);
     }
 
     public function is_stock($postId)
@@ -95,6 +81,7 @@ class User extends Authenticatable implements HasMedia
         return $this->stocks()->where('post_id', $postId)->exists();
     }
 
+    // アバター有無の判定 無しの場合はデフォルトのユーザー画像を表示
     public function has_avatar() 
     {
         $count = $this->media->count();
