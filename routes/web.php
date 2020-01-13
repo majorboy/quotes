@@ -21,7 +21,6 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'edit', 'update'
 Route::get('pass', 'PasswordsController@edit');
 Route::post('pass', 'PasswordsController@update')->name('pass');
 
-
 Route::get('/users/{user}/stocks', 'StocksController@index');
 
 Route::group(['prefix'=>'posts/{post}'],function(){
